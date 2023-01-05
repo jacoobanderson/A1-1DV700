@@ -28,5 +28,35 @@ public class App {
 
         System.out.println("Enter a file to process: ");
         String file = scan.nextLine();
+
+        if (typeOfMethod == 1) {
+            if (encryptOrDecrypt == 1) {
+                substitutionEncryption(secretKey, file);
+            } else if (encryptOrDecrypt == 2) {
+                substitutionDecryption(secretKey, file);
+            }
+        } else if (typeOfMethod == 2) {
+            if (encryptOrDecrypt == 1) {
+                transpositionEncryption(secretKey, file);
+            } else if (encryptOrDecrypt == 2) {
+                transpositionDecryption(secretKey, file);
+            }
+        }
+    }
+
+    public static void substitutionEncryption(String key, String file) {
+        System.out.println("subEnc");
+    }
+
+    public static void substitutionDecryption(String key, String file) {
+        System.out.println("subDec");
+    }
+
+    public static void transpositionEncryption(String key, String file) {
+        System.out.println("tranEnc");
+    }
+
+    public static void transpositionDecryption(String key, String file) {
+        System.out.println("TranDec");
     }
 }
