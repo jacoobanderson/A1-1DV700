@@ -3,12 +3,30 @@
  */
 package A1;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Scanner;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Which encryption method do you want to use?");
+        System.out.println("1. Substitution");
+        System.out.println("2. Transposition");
+
+        int typeOfMethod = scan.nextInt();
+        scan.nextLine();
+
+        System.out.println("\nDo you want to encrypt or decrypt?");
+        System.out.println("1. Encrypt");
+        System.out.println("2. Decrypt");
+
+        int encryptOrDecrypt = scan.nextInt();
+        scan.nextLine();
+
+        System.out.println("Enter a secret key: ");
+        String secretKey = scan.nextLine();
+
+        System.out.println("Enter a file to process: ");
+        String file = scan.nextLine();
     }
 }
